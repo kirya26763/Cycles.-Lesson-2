@@ -86,7 +86,6 @@ public class Main {
             if (year > star) {
                 System.out.println(year);
             }
-
         }
     }
 }
