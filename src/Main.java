@@ -2,13 +2,14 @@ public class Main {
     public static void main(String[] args) {
         //Task 1
         System.out.println("Task 1");
-        float monthly = 15000.f;
+        float monthly = 15000.0f;
         int finalSum = 2_459_000;
         float total = 0.0f;
         int month = 0;
         double precent = 1D / 100;
         while (total <= finalSum) {
-            total = (float) (total + monthly + (total * precent));
+            total = total + monthly;
+            total += (float) (total * precent);
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
