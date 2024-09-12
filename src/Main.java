@@ -2,14 +2,13 @@ public class Main {
     public static void main(String[] args) {
         //Task 1
         System.out.println("Task 1");
-        int monthly = 15000;
+        double monthly = 15000;
         int finalSum = 2_459_000;
-        int total = 0;
+        double total = 0;
         int month = 0;
         double precent = 1d / 100;
         while (total <= finalSum) {
-            total += monthly;
-            total = (int) (total * (1 + precent));
+            total = total + monthly + (total * precent);
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
@@ -39,11 +38,11 @@ public class Main {
         System.out.println("Task 4");
         finalSum = 12_000_000;
         total = monthly;
-        precent = 7D / 100;
         month = 0;
+        precent = 7D / 100;
         while (total <= finalSum) {
             month++;
-            total = (int) (total * (1 + precent));
+            total += (total * precent);
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
         //Task 5
@@ -52,7 +51,7 @@ public class Main {
         total = monthly;
         while (total < finalSum) {
             month++;
-            total = (int) (total * (1 + precent));
+            total += (total * precent);
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
             }
@@ -64,7 +63,7 @@ public class Main {
         total = monthly;
         while (month < year) {
             month++;
-            total = (int) (total * (1 + precent));
+            total += (total * precent);
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
             }
@@ -87,6 +86,7 @@ public class Main {
             if (year > star) {
                 System.out.println(year);
             }
+
         }
     }
 }
