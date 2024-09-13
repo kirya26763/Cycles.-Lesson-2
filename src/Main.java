@@ -1,17 +1,21 @@
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
         //Task 1
         System.out.println("Task 1");
-        float monthly = 15000.0f;
+        double monthly = 15000;
         int finalSum = 2_459_000;
-        float total = 0.0f;
+        double total = 0;
         int month = 0;
+        int sum;
         double precent = 1D / 100;
         while (total <= finalSum) {
             total = total + monthly;
             total += (float) (total * precent);
             month++;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+            sum = (int) total;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
         //Task 2
         System.out.println("Task 2");
@@ -44,7 +48,8 @@ public class Main {
         while (total <= finalSum) {
             month++;
             total += (total * precent);
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+            sum = (int) total;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
         //Task 5
         System.out.println("Task 5");
@@ -53,8 +58,9 @@ public class Main {
         while (total < finalSum) {
             month++;
             total += (total * precent);
+            sum = (int) total;
             if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
             }
         }
         //Task 6
@@ -65,8 +71,9 @@ public class Main {
         while (month < year) {
             month++;
             total += (total * precent);
+            sum = (int) total;
             if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
             }
         }
         //Task 7
